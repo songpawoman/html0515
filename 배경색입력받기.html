@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100%;
+            height:600px;
+            background:black;
+        }
+    </style>
+    <script>
+        function init(){
+            let n=parseInt(prompt("원하시는 색상을 선택하세요\n1.빨강 2.주황 3.노랑 4.초록 5.파랑 6.남색 7.보라"));
+            
+            //문서내에 div 요소의 스타일 중 배경색상을 변경해보자 
+            let box=document.getElementById("box");
+            
+            let bg="";//아직 미결정 
+            if(n==1){ //1번이 선택되었다면..
+                bg="red";
+            }
+            if(n==2){ //2번이 선택되었다면..
+                bg="orange";
+            }
+            box.style.background=bg;
+        }
+    </script>
+</head>
+
+<body onLoad="init()">
+    <div id="box"></div>
+</body>
+</html>
+
+
+
+
