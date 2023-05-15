@@ -10,6 +10,11 @@
             width:500px;
             height:400px;
             background:yellow;
+            overflow:scroll;
+            /* 
+            scroll 스크롤처리
+            hidden 넘치는 컨텐츠에 대한 처리 
+            */
         }        
     </style>
     <script>
@@ -22,7 +27,8 @@
 
             //js에서 버튼에 onclick이벤트 연결하기 
             bt.addEventListener("click", function(){
-                alert("버튼 눌렀어?");
+                //alert("버튼 눌렀어?");
+                createImage();
             }); //버튼에 리스너 연결 onClick과 동일
         }
 
@@ -33,6 +39,8 @@
             //이미지 동적으로 생성하기 
             let img=document.createElement("img"); // <img> 동일
             img.src="../images/plane.png"; // <img src=""> 동일
+            //생성된 이미지에 대해 js 에서 스타일을 적용해본다 
+            img.style.width=45+"px";           
             box.appendChild(img);
         }
     </script>
