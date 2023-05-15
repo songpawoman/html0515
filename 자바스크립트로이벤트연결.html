@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +27,13 @@
             pic.addEventListener("mouseout", function () {
                 alert("마우스내려놓았어?");
             });
+
+            //문서내의 sel이라는 선택상자에 대한 이벤트 연결 
+            let sel=document.getElementById("sel");
+            sel.addEventListener("change", function(){
+                alert("값 바꿨어?");
+            });
+            
         }
     </script>
 </head>
