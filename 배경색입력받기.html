@@ -20,11 +20,41 @@
             let box=document.getElementById("box");
             
             let bg="";//아직 미결정 
+
+            /*
             if(n==1){ //1번이 선택되었다면..
                 bg="red";
-            }
-            if(n==2){ //2번이 선택되었다면..
+            }else if(n==2){ //2번이 선택되었다면..
                 bg="orange";
+            }else if(n==3){ //3번이 선택되었다면..
+                bg="yellow";
+            }else if(n==4){ //4번이 선택되었다면..
+                bg="green";
+            }else if(n==5){ //5번이 선택되었다면..
+                bg="blue";
+            }else if(n==6){ //6번이 선택되었다면..
+                bg="navy";
+            }else if(n==7){ //7번이 선택되었다면..
+                bg="purple";
+            }else{
+                bg="black";
+                alert("1~7번 사이만 입력하세요");
+            }
+            */
+
+            //else~if문을 더 간략화시킬수 있는 switch ~case문을 사용해본다
+            switch(n){ //조건 판단의 대상이 되는 데이터를 소괄호에 대입
+                case 1:bg="red";break;
+                case 2:bg="orange";break; //다음 문장으로 진입하지마라
+                case 3:bg="yellow";break;
+                case 4:bg="green";break;
+                case 5:bg="blue";break;
+                case 6:bg="navy";break;
+                case 7:bg="purple";break;
+
+                //else~if에서의 else문과 동일한 역할
+                default:bg="black";
+                            alert("똑바로넣어"); 
             }
             box.style.background=bg;
         }
